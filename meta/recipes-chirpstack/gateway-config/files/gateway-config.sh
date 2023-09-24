@@ -456,6 +456,7 @@ do_setup_rhf0m301() {
     FUN=$(dialog --title "Channel-plan configuration" --menu "Select the channel-plan:" 15 60 2 \
         1 "EU868" \
         2 "US915" \
+        3 "AU915" \
         3>&1 1>&2 2>&3)
     RET=$?
     if [ $RET -eq 1 ]; then
@@ -464,6 +465,7 @@ do_setup_rhf0m301() {
         case "$FUN" in
             1) do_copy_concentratord_config "sx1301" "risinghf_rhf0m301_eu868" "" "eu868" "" && do_update_chirpstack_mqtt_forwarder_topic_prefix "eu868";;
             2) do_select_us915_block "sx1301" "risinghf_rhf0m301_us915" "";;
+            3) do_select_au915_block "sx1301" "risinghf_rhf0m301_au915" "";;
         esac
     fi
 }

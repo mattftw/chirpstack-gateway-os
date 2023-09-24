@@ -7,8 +7,8 @@ inherit cargo
 
 # how to get chirpstack-concentratord-sx1301 could be as easy as but default to a git checkout:
 # SRC_URI += "crate://crates.io/chirpstack-concentratord-sx1301/4.1.1"
-SRC_URI += "git://git@github.com/chirpstack/chirpstack-concentratord.git;protocol=ssh;nobranch=1"
-SRCREV = "0866d53a1f1f625ae81562deff45263d7101b102"
+SRC_URI += "git://git@github.com/mattftw/chirpstack-concentratord.git;protocol=ssh;nobranch=1"
+SRCREV = "0a1e1fa94e30840f4c26c34f3adb719df9f12c02"
 S = "${WORKDIR}/git"
 CARGO_SRC_DIR = "chirpstack-concentratord-sx1301"
 
